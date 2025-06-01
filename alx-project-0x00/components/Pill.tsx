@@ -1,9 +1,7 @@
 // components/Pill.tsx
 import React from "react";
-// interfaces/index.ts
-export interface PillProps {
-  title: string;
-}
+import { PillProps } from "@/interfaces";
+
 
 const Pill: React.FC<PillProps> = ({ title }) => {
   return (
