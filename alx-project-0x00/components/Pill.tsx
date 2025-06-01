@@ -1,13 +1,13 @@
-// pill.tsx
+// components/Pill.tsx
 import React from "react";
-
-interface PillProps {
+// interfaces/index.ts
+export interface PillProps {
   title: string;
 }
 
 const Pill: React.FC<PillProps> = ({ title }) => {
   return (
-    <span className="px-3 py-1 bg-[#F6F6F6] text-sm rounded-full font-medium text-[#6E6E6E]">
+    <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">
       {title}
     </span>
   );
