@@ -1,65 +1,38 @@
-// card.tsx
+// components/Card.tsx
 import Image from "next/image";
-import HOUSE_IMAGE from "@/public/assets/images/house.png";
-import STAR_IMAGE from "@/public/assets/images/star.png";
 import React from "react";
 import Pill from "./Pill";
 
 const Card: React.FC = () => {
   return (
-    <div className="h-[422px] w-[378.56px] cursor-pointer hover:shadow-md hover:rounded-lg">
-      <Image
-        className="rounded-lg"
-        src={HOUSE_IMAGE}
-        width={378.56}
-        height={299.37}
-        alt="house image"
-      />
-      <div className="p-2 flex gap-2 mt-2">
-        <Pill title="Top Villa" />
-        <Pill title="Self CheckIn" />
-        <Pill title="Free Reschedule" />
+    <div className="border rounded-lg shadow-md p-4 w-full">
+      <div className="relative w-full h-48 mb-4">
+        <Image
+          src="/assets/house.png"
+          alt="House"
+          layout="fill"
+          objectFit="cover"
+          className="rounded"
+        />
       </div>
-      <div className="flex items-center justify-between">
-        <div>
-          <h3 className="font-semibold text-[22px]">
-            Villa Arrecife Beach House
-          </h3>
-          <p className="font-medium text-[17px] text-[#929292]">
-            Sideman, Bali, Indonesia
-          </p>
-        </div>
-        <div className="flex items-center">
-          <Image src={STAR_IMAGE} alt="star" />
-          <p className="font-medium text-[17px] ml-2">4.76</p>
-        </div>
+      <div className="mb-2">
+        <Pill title="New Listing" />
+        <Pill title="Luxury" />
+        <Pill title="Family Home" />
       </div>
-
-      <div className="flex justify-between mt-4">
-        <div className="grid grid-cols-3 border w-[156px] rounded-full px-2 py-1">
-          <div className="flex items-center">
-            {/* Add your custom SVG icons here */}
-            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-             
-            </svg>
-            <p className="ml-1 text-[12.95px] font-medium">4</p>
-          </div>
-          <div className="flex items-center">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-             
-            </svg>
-            <p className="ml-1 text-[12.95px] font-medium">3</p>
-          </div>
-          <div className="flex items-center">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-             
-            </svg>
-            <p className="ml-1 text-[12.95px] font-medium">2</p>
-          </div>
+      <div>
+        <h2 className="text-xl font-semibold mb-1">Beautiful House</h2>
+        <p className="text-gray-600">Lagos, Nigeria</p>
+        <div className="flex items-center mt-2">
+          <Image
+            src="/assets/star.png"
+            alt="Rating"
+            width={16}
+            height={16}
+          />
+          <span className="ml-1 text-sm">4.5</span>
         </div>
-        <div className="text-[17px] font-semibold">
-          <p>$653 / night</p>
-        </div>
+        <p className="mt-2 font-bold text-lg">$250,000</p>
       </div>
     </div>
   );
