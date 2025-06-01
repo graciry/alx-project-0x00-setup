@@ -5,17 +5,16 @@ import Pill from "./Pill";
 
 const Card: React.FC = () => {
   return (
-    <div className="border rounded-lg shadow-md p-4 w-full">
-      <div className="relative w-full h-48 mb-4">
+    <div className="border rounded-lg shadow-md p-4 w-full max-w-sm">
+      <div className="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg">
         <Image
           src="/assets/house.png"
           alt="House"
-          layout="fill"
-          objectFit="cover"
-          className="rounded"
+          fill
+          className="object-cover"
         />
       </div>
-      <div className="mb-2">
+      <div className="flex flex-wrap gap-2 mb-2">
         <Pill title="New Listing" />
         <Pill title="Luxury" />
         <Pill title="Family Home" />

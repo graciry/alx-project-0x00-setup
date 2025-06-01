@@ -1,20 +1,29 @@
 // pages/landing.tsx
+
 import React from "react";
 import Card from "@/components/Card";
+import Button from "@/components/Button";
 
-const LandingPage: React.FC = () => {
+const Landing = () => {
   return (
     <div className="p-8">
       <h1 className="text-3xl font-bold mb-6">Welcome to the Landing Page</h1>
+      
+      {/* Card usage - flex layout */}
+      <div className="flex flex-wrap gap-6 justify-center mb-10">
+        <Card />
+        <Card />
+        <Card />
+      </div>
 
-      {/* Render multiple Card components */}
-      <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        <Card />
-        <Card />
-        <Card />
+      {/* Button variations - horizontal row */}
+      <div className="flex flex-wrap gap-4 justify-center">
+        <Button title="Small Rounded" styles="text-sm rounded-sm bg-blue-500 text-white px-4 py-2" />
+        <Button title="Medium Rounded" styles="text-base rounded-md bg-green-500 text-white px-5 py-2.5" />
+        <Button title="Large Fully Rounded" styles="text-lg rounded-full bg-red-500 text-white px-6 py-3" />
       </div>
     </div>
   );
 };
 
-export default LandingPage;
+export default Landing;

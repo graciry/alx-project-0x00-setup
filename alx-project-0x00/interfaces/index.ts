@@ -4,11 +4,7 @@ export interface PillProps {
   title: string;
 }
 
-// (Optional) If you later want to pass props to the Card component,
-// you can define something like this:
-
-export interface CardProps {
-  imageSrc: string;
+export interface ButtonProps {
   title: string;
-  tags: string[];
+  styles: string;
 }
